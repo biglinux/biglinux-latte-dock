@@ -10,7 +10,7 @@ pkgrel=2
 arch=('x86_64')
 license=('GPL')
 url="https://github.com/biglinux/$pkgname"
-provides=("latte-dock")
+provides=("latte-dock=0.10.9-2")
 source=("git+${url}.git")
 md5sums=('SKIP')
 if [ -e "${pkgname}.install" ];then
