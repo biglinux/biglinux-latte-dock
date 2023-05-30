@@ -1,0 +1,14 @@
+post_install() {
+/usr/share/deb-pkg-files/latte-dock/postinst install 2> /dev/null
+/usr/share/deb-pkg-files/latte-dock/postinst configure 2> /dev/null
+}
+
+post_upgrade() {
+/usr/share/deb-pkg-files/latte-dock/postinst upgrade 2> /dev/null
+}
+
+post_remove() {
+	if command -v update-icon-caches >/dev/null; then
+		update-icon-caches /usr/share/icons/breeze
+	fi
+}

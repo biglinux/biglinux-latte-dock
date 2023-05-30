@@ -1,16 +1,16 @@
-# Maintainer: Barnabé di Kartola <barnabedikartola@gmail.com>
+# Maintainer: Tales A. Mendonça <talesam@gmail.com>
 
-pkgname=biglinux-package-template
-pkgdesc="Package template for biglinux"
-# depends=('')
+pkgname=biglinux-latte-dock
+pkgdesc="Latte is a dock based on plasma frameworks that provides an elegant and intuitive experience for your tasks and plasmoids. It animates it's contents by using parabolic zoom effect and tries to be there only when it is needed."
+depends=('plasma-framework' 'kirigami2' 'knewstuff' 'hicolor-icon-theme' 'plasma-wayland-protocols')
 # makedepends=('')
-# conflicts=('')
-pkgver=$(date +%y.%m.%d)
-pkgrel=$(date +%H%M)
-arch=('any')
-license=('GPL3')
+conflicts=('latte-dock')
+pkgver=0.10.9
+pkgrel=10
+arch=('x86_64')
+license=('GPL')
 url="https://github.com/biglinux/$pkgname"
-provides=("$pkgname")
+provides=("latte-dock")
 source=("git+${url}.git")
 md5sums=('SKIP')
 if [ -e "${pkgname}.install" ];then
